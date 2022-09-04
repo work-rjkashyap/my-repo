@@ -1,7 +1,7 @@
 module.exports = {
 	siteMetadata: {
 		title: `Rajeshwar Kashyap`,
-		siteUrl: `https://rajeshwar-kashyap.github.io`,
+		siteUrl: `https://work-rjkashyap.github.io`,
 		twitterUsername: '@RajeshwarKash11',
 		description:
 			'Rajeshwar Kashyap is a FullStack Developer who specializes in building (and occasionally designing) exceptional digital experiences.',
