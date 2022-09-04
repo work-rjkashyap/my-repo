@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import AboutMe from '../components/AboutMe';
 import Head from '../components/Head';
 import Hero from '../components/Hero';

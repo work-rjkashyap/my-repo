@@ -1,4 +1,3 @@
-import { Link } from 'gatsby';
 import React from 'react';
 import { TbBrandLinkedin } from 'react-icons/tb';
 import link from '../utils/social.json';

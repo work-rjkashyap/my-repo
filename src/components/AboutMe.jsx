@@ -9,12 +9,11 @@ import {
 	TbBrandReactNative,
 	TbBrandTailwind,
 } from 'react-icons/tb';
-import { IoLogoReact, IoLogoNodejs } from 'react-icons/io';
+import { IoLogoNodejs } from 'react-icons/io';
 import {
 	SiReact,
 	SiMongodb,
 	SiMysql,
-	SiSass,
 	SiTypescript,
 	SiCodeigniter,
 	SiLaravel,

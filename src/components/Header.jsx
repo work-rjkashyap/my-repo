@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import LogoDark from '../images/logo-light.svg';
-import LogoLight from '../images/logo-dark.svg';
 import {
 	FiGithub,
 	FiLinkedin,
@@ -13,10 +11,9 @@ import { MdMarkEmailRead } from 'react-icons/md';
 import Toggle from './ThemeToggle';
 import { ThemeContext } from './ThemeContext';
 import link from '../utils/social.json';
-import { Link } from 'gatsby';
 export default function Header() {
 	const [show, setshow] = useState(false);
-	const { theme, setTheme } = React.useContext(ThemeContext);
+	const { theme } = React.useContext(ThemeContext);
 
 	return (
 		<div className='sticky top-0 backdrop-blur-sm '>
@@ -24,35 +21,31 @@ export default function Header() {
 				{/* For large and Medium-sized Screen */}
 				<div className='flex justify-between '>
 					<div className='hidden sm:flex flex-row items-center space-x-6'>
-						<a href={link.github} target='_blank' rel='noopener noreferrer'>
+						<a href={link.github} target='_blank' rel='noreferrer'>
 							<FiGithub
 								className='text-dark dark:text-white icon-github  ease-in duration-300'
 								size={25}
 							/>
 						</a>
-						<a href={link.linkedin} target='_blank' rel='noopener noreferrer'>
+						<a href={link.linkedin} target='_blank' rel='noreferrer'>
 							<FiLinkedin
 								className='text-dark dark:text-white icon-linkedin  ease-in duration-300'
 								size={25}
 							/>
 						</a>
-						<a href={link.twitter} target='_blank' rel='noopener noreferrer'>
+						<a href={link.twitter} target='_blank' rel='noreferrer'>
 							<FiTwitter
 								className='text-dark dark:text-white icon-twitter  ease-in duration-300'
 								size={25}
 							/>
 						</a>
-						<a href={link.instagram} target='_blank' rel='noopener noreferrer'>
+						<a href={link.instagram} target='_blank' rel='noreferrer'>
 							<FiInstagram
 								className='text-dark dark:text-white icon-instagram  ease-in duration-300'
 								size={25}
 							/>
 						</a>
-						<a
-							href={`mailto:${link.email}`}
-							target='_blank'
-							rel='noopener noreferrer'
-						>
+						<a href={`mailto:${link.email}`} target='_blank' rel='noreferrer'>
 							<MdMarkEmailRead
 								className='text-dark dark:text-white icon-mail  ease-in duration-300'
 								size={25}
@@ -62,9 +55,17 @@ export default function Header() {
 					{/* logo */}
 					<div className=' flex space-x-3 items-center'>
 						{theme === 'dark' ? (
-							<img src={LogoLight} className='w-[100px]  inline' alt='Logo' />
+							<img
+								src={'../images/logo-dark.svg'}
+								className='w-[100px]  inline'
+								alt='Logo'
+							/>
 						) : (
-							<img src={LogoDark} className='w-[100px]  inline' alt='Logo' />
+							<img
+								src={'../images/logo-light.svg'}
+								className='w-[100px]  inline'
+								alt='Logo'
+							/>
 						)}
 					</div>
 					<div className='hidden sm:flex flex-row space-x-4'>
@@ -106,35 +107,31 @@ export default function Header() {
 					className={`${show ? 'block' : 'hidden'} sm:hidden mt-4 mx-auto`}
 				>
 					<div className='flex flex-row items-center justify-center space-x-6'>
-						<a href={link.github} target='_blank' rel='noopener noreferrer'>
+						<a href={link.github} target='_blank' rel='noreferrer'>
 							<FiGithub
 								className='text-dark dark:text-white icon-github  ease-in duration-300'
 								size={25}
 							/>
 						</a>
-						<a href={link.linkedin} target='_blank' rel='noopener noreferrer'>
+						<a href={link.linkedin} target='_blank' rel='noreferrer'>
 							<FiLinkedin
 								className='text-dark dark:text-white icon-linkedin  ease-in duration-300'
 								size={25}
 							/>
 						</a>
-						<a href={link.twitter} target='_blank' rel='noopener noreferrer'>
+						<a href={link.twitter} target='_blank' rel='noreferrer'>
 							<FiTwitter
 								className='text-dark dark:text-white icon-twitter  ease-in duration-300'
 								size={25}
 							/>
 						</a>
-						<a href={link.instagram} target='_blank' rel='noopener noreferrer'>
+						<a href={link.instagram} target='_blank' rel='noreferrer'>
 							<FiInstagram
 								className='text-dark dark:text-white icon-instagram  ease-in duration-300'
 								size={25}
 							/>
 						</a>
-						<a
-							href={`mailto:${link.email}`}
-							target='_blank'
-							rel='noopener noreferrer'
-						>
+						<a href={`mailto:${link.email}`} target='_blank' rel='noreferrer'>
 							<MdMarkEmailRead
 								className='text-dark dark:text-white icon-mail  ease-in duration-300'
 								size={25}
